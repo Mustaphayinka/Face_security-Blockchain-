@@ -1,0 +1,4 @@
+[{"constant":false,"inputs":[{"name":"imageHash","type":"string"},{"name":"blockchainAddress","type":"string"}],"name":"storeImageHash","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"imageHash","type":"string"}],"name":"getBlockchainAddress","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}]
+
+
+[{"constant":false,"inputs":[{"name":"imageHash","type":"string"},{"name":"blockchainAddress","type":"string"}],"name":"storeImageHash","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"imageHash","type":"string"}],"name":"getBlockchainAddress","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}]

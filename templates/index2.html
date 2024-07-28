@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Security Project</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Upload a Face Image</h1>
+        <form id="uploadForm" method="POST" action="/" enctype="multipart/form-data" class="mt-3">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile" name="file" accept="image/*" required>
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+
+        <!-- Display the processed image with detected faces if available -->
+        {% if processed_image %}
+        <div class="mt-4 text-center">
+            <h2>Detected Faces</h2>
+            <img src="{{ url_for('static', filename='file.jpg') }}" alt="Processed Image" class="img-fluid">
+        </div>
+        {% endif %}
+    </div>
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Automatically submit the form on file selection
+        document.getElementById('customFile').addEventListener('change', function() {
+            document.getElementById('uploadForm').submit();
+        });
+    </script>
+</body>
+</html>
